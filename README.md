@@ -40,7 +40,7 @@ To show the details of the potential snp positions
 ./AFPhyloMix potentialsnp [SAM/BAM file]
 ```
 
-Options:
+Options
 ```
 -r : resume MCMCMC from the previous run
 -e [prefix of output file]
