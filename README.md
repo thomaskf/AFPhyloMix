@@ -27,17 +27,17 @@ Then an executable file: AFPhyloMix will appear.
 
 To run MCMCMC from SAM/BAM file
 ```
-./AFPhyloMix mcmcmc2 [SAM/BAM file] [# of haplos >= 2] [# of threads] <options>
+$ ./AFPhyloMix mcmcmc2 [SAM/BAM file] [# of haplos >= 2] [# of threads] <options>
 ```
 
 To show the detailed information for each position
 ```
-./AFPhyloMix detail [file including all SAM file names]
+$ ./AFPhyloMix detail [file including all SAM file names]
 ```
 
 To show the details of the potential snp positions
 ```
-./AFPhyloMix potentialsnp [SAM/BAM file]
+$ ./AFPhyloMix potentialsnp [SAM/BAM file]
 ```
 
 Options
