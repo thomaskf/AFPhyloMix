@@ -9,8 +9,8 @@ to have a C++ compiler installed in the computer to compile the source codes. Th
 are shown as follows (xxx is the version of AFPhyloMix):
 
 ```
-$ tar -zxvf AFPhyloMix_xxx.tar.gz
-$ cd AFPhyloMix_xxx
+$ tar -zxvf AFPhyloMix-xxx.tar.gz
+$ cd AFPhyloMix-xxx
 $ make
 ```
 
