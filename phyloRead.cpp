@@ -384,11 +384,13 @@ void PhyloRead::loadData(char* samFile, set<int>& show_pos) {
     cout << "Identifying the bad mutation..." << endl;
     findBadMutations(snpPosSet, snpChars, show_pos);
     
+    /*
     // show the snp positions
     cout << (int) snpPosSet.size() << " SNP positions to consider" << endl;
     for (i=0; i<(int) snpPosSet.size(); i++) {
         cout << snpPosSet[i] << endl;
     }
+    */
     // exit(1);
     
     // select the reference position for each window

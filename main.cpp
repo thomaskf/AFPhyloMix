@@ -17,8 +17,6 @@ void showHelpMenu(char** argv) {
     cerr << "To run MCMCMC from SAM/BAM file" << endl;
     cerr << "  " << argv[0] << " mcmcmc2 [SAM/BAM file] [# of haplos >= 2] [# of threads] <options>" << endl;
     
-    cerr << "To show the detailed information for each position" << endl;
-    cerr << "  " << argv[0] << " detail [file including all SAM file names]" << endl;
     cerr << "To show the details of the potential snp positions" << endl;
     cerr << "  " << argv[0] << " potentialsnp [SAM/BAM file]" << endl << endl;
 
