@@ -151,7 +151,7 @@ int main(int argc, char** argv) {
     int i;
     int startOptionIndex;
     set<int> show_pos;
-    int backMutateMethod = 0;
+    int backMutateMethod = 3; // default is 3
     int toResume = 0;
     int numThreads;
 
