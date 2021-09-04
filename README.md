@@ -29,16 +29,6 @@ To run MCMCMC from SAM/BAM file
 $ ./AFPhyloMix mcmcmc2 [SAM/BAM file] [# of haplos >= 2] [# of threads] <options>
 ```
 
-To show the detailed information for each position
-```
-$ ./AFPhyloMix detail [file including all SAM file names]
-```
-
-To show the details of the potential snp positions
-```
-$ ./AFPhyloMix potentialsnp [SAM/BAM file]
-```
-
 Options
 ```
 -r : resume MCMCMC from the previous run
