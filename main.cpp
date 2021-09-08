@@ -8,17 +8,20 @@
 #include <time.h>
 #include <fstream>
 
-#define VERSION "c1.9"
+#define VERSION "c1.10"
 
 void showHelpMenu(char** argv) {
-    cerr << "AFPhyloMix (Assembly-Free Phylogenetics for Mixtures) is developed to build a phylogenetic tree directly from the mixture of reads which cannot be separated to different individuals, without the assembly process of genomic sequences." << endl;
+    cerr << "AFPhyloMix (Assembly-Free Phylogenetics for Mixtures) is a method to recover the phylogeny of haplotypes from short-read sequences obtained using pooled amplicons from a mixture of individuals, without barcoding." << endl;
+    cerr << endl;
+    cerr << "Please note that AFPhyloMix only works on the reads sequenced under the same sequencing run." << endl;
     cerr << endl;
     cerr << "Syntax:" << endl;
     cerr << "To run MCMCMC from SAM/BAM file" << endl;
     cerr << "  " << argv[0] << " mcmcmc2 [SAM/BAM file] [# of haplos >= 2] [# of threads] <options>" << endl;
+    cerr << endl;
     
-    cerr << "To show the details of the potential snp positions" << endl;
-    cerr << "  " << argv[0] << " potentialsnp [SAM/BAM file]" << endl << endl;
+    // cerr << "To show the details of the potential snp positions" << endl;
+    // cerr << "  " << argv[0] << " potentialsnp [SAM/BAM file]" << endl << endl;
 
     cerr << "Options:" << endl;
     cerr << "-r : resume MCMCMC from the previous run" << endl;
@@ -26,6 +29,18 @@ void showHelpMenu(char** argv) {
     cerr << "-n [number of generations] (default: 50k)" << endl;
     cerr << "-p [print every number of cycles] (default: 100)" << endl;
     cerr << "-b [check hot chains every number of cycles] (default: 5)" << endl;
+    cerr << endl;
+
+    cerr << "Output fles:" << endl;
+    cerr << "[SAM/BAM file w/o ext].max.tree : the tree with tip frequencies having the maximum posterior probability along the cold chain" << endl;
+    cerr << "[SAM/BAM file w/o ext].x.log    : the log file listing the likelihod, posterior probability, and the parameter values every, by default, 100 cycles along the x-th chain" << endl;
+    cerr << endl;
+
+    cerr << "Example:" << endl;
+    cerr << "  " << argv[0] << " mcmcmc2 example.bam 5 8" << endl;
+    cerr << endl;
+    cerr << "The true tree is: example.real.tree" << endl;
+    cerr << "You may compare the resulting estimated tree - example.max.tree with the true tree" << endl;
     cerr << endl;
 }
 
