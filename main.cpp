@@ -36,7 +36,7 @@ void showHelpMenu(char** argv) {
     cerr << "[SAM/BAM file w/o ext].x.log    : the log file listing the likelihod, posterior probability, and the parameter values every, by default, 100 cycles along the x-th chain" << endl;
     cerr << endl;
 
-    cerr << "Example:" << endl;
+    cerr << "Example (# of tips = 5, # of CPU threads = 8):" << endl;
     cerr << "  " << argv[0] << " mcmcmc2 example.bam 5 8" << endl;
     cerr << endl;
     cerr << "The true tree is: example.real.tree" << endl;
